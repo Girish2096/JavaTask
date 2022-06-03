@@ -1,0 +1,71 @@
+package com.girish.Model;
+
+import java.time.LocalTime;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
+public class Coin {
+    @Id
+	private int id;
+	private double price;
+	private double qty;
+	private double quoteQty;
+	private LocalTime time;
+	private boolean isBuyerMaker;
+	private boolean isBestMatch;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public double getQty() {
+		return qty;
+	}
+	public void setQty(double qty) {
+		this.qty = qty;
+	}
+	public double getQuoteQty() {
+		return quoteQty;
+	}
+	public void setQuoteQty(double quoteQty) {
+		this.quoteQty = quoteQty;
+	}
+	public LocalTime getTime() {
+		return time;
+	}
+	public void setTime(LocalTime time) {
+		this.time = time;
+	}
+	public boolean isBuyerMaker() {
+		return isBuyerMaker;
+	}
+	public void setBuyerMaker(boolean isBuyerMaker) {
+		this.isBuyerMaker = isBuyerMaker;
+	}
+	public boolean isBestMatch() {
+		return isBestMatch;
+	}
+	public void setBestMatch(boolean isBestMatch) {
+		this.isBestMatch = isBestMatch;
+	}
+	@Override
+	public String toString() {
+		return "Coin [id=" + id + ", price=" + price + ", qty=" + qty + ", quoteQty=" + quoteQty + ", time=" + time
+				+ ", isBuyerMaker=" + isBuyerMaker + ", isBestMatch=" + isBestMatch + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+}

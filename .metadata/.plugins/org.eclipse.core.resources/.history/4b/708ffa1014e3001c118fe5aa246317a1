@@ -1,0 +1,38 @@
+package com.girish.Service;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.girish.Repository.CoinRepository;
+
+public class Test {
+	
+	private CoinRepository coinRepository;
+	
+	public void getInfo()
+	{
+		
+		RestTemplate rest=new RestTemplate();
+		String url="https://api.binance.com/api/v3/trades?symbol=ETHUSDT&limit=1000";
+		
+	      ResponseEntity<Object[]> responseentity  =  rest.getForEntity(url, Object[].class);
+	                  
+	      Object[] body = responseentity.getBody();
+	      
+	      ObjectMapper mapper=new ObjectMapper();
+	      
+	      
+	                  
+	                  
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
